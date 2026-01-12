@@ -1,12 +1,17 @@
-# Static site image built on nginx
+# Build the Vite site
+FROM node:20-alpine AS build
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm ci
+
+COPY . .
+RUN npm run build
+
+# Serve the static site with nginx
 FROM nginx:1.27-alpine
-
-# Remove default nginx content before copying the static site.
 RUN rm -rf /usr/share/nginx/html/*
-
-# Copy the repository (filtered by .dockerignore) into the web root.
-COPY . /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 
 EXPOSE 80
-
 CMD ["nginx","-g","daemon off;"]
