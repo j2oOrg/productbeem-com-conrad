@@ -1,627 +1,264 @@
-<!DOCTYPE html>
-<html lang="sv">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1" >
-    <title>Helsinki Sum Hotel - Litet boutiquehotell i Helsingfors</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProductBeem - Brand-perfect product imagery from one photo</title>
     <meta
       name="description"
-      content="Ett litet boutiquehotell på Annankatu i Helsingfors med bastu, restaurang och personligt värdskap."
-    >
-    <!-- Strukturdata för sökmotorer (Hotel). -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Hotel",
-        "name": "Helsinki Sum Hotel",
-        "description": "Ett litet boutiquehotell på Annankatu i Helsingfors med bastu och restaurang.",
-        "telephone": "+358300870680",
-        "email": "hej@productbeem.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Annankatu 22",
-          "postalCode": "00120",
-          "addressLocality": "Helsinki",
-          "addressCountry": "FI"
-        },
-        "image": [
-          "https://productbeem.com/images/optimized/receptionists-our-people-1200.jpg",
-          "https://productbeem.com/images/optimized/hotel-restaurant-1200.jpg",
-          "https://productbeem.com/images/optimized/bed-room-2-deluxe-1200.jpg"
-        ]
-      }
-    </script>
-    <style>
-      /* Grund, typografi och färger. */
-      :root {
-        --hs-home-ink: #15232d;
-        --hs-home-cream: #f2efe8;
-        --hs-home-sea: #3f6c7a;
-        --hs-home-sun: #c4913a;
-        --hs-home-rose: #9d7a66;
-        --hs-home-stone: #5a6166;
-        --hs-home-mist: rgba(255, 255, 255, 0.78);
-        --hs-home-shadow: 0 18px 40px rgba(21, 35, 45, 0.18);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family: "Trebuchet MS", "Gill Sans", "Candara", sans-serif;
-        color: var(--hs-home-ink);
-        background: linear-gradient(160deg, #f5f2ec 0%, #e5edf0 45%, #cbd7dd 100%);
-      }
-
-      .hs-home-wrap {
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hs-home-wrap::before {
-        content: "";
-        position: absolute;
-        inset: -20% -10% auto -10%;
-        height: 52%;
-        background: radial-gradient(circle at 20% 30%, #fff7ee 0%, transparent 55%),
-          radial-gradient(circle at 80% 10%, rgba(63, 108, 122, 0.22), transparent 60%);
-        pointer-events: none;
-      }
-
-      /* Header och navigation. */
-      .hs-home-header {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        backdrop-filter: blur(10px);
-        background: rgba(242, 239, 232, 0.85);
-        border-bottom: 1px solid rgba(21, 35, 45, 0.08);
-      }
-
-      .hs-home-top {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 18px 24px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-      }
-
-      .hs-home-logo {
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        font-size: 1.3rem;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-      }
-
-      .hs-home-nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 14px;
-        font-size: 0.95rem;
-      }
-
-      .hs-home-contact {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        align-items: center;
-        font-size: 0.95rem;
-      }
-
-      .hs-home-contact span {
-        background: rgba(63, 108, 122, 0.12);
-        padding: 6px 12px;
-        border-radius: 999px;
-        font-weight: 600;
-      }
-
-      .hs-home-contact a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .hs-home-contact a:hover {
-        text-decoration: underline;
-      }
-
-      .hs-home-inline-link {
-        color: inherit;
-        text-decoration: underline;
-        text-decoration-color: rgba(21, 35, 45, 0.35);
-      }
-
-      .hs-home-inline-link:hover {
-        color: var(--hs-home-sea);
-      }
-
-      .hs-home-nav a {
-        text-decoration: none;
-        color: var(--hs-home-ink);
-        padding: 6px 10px;
-        border-radius: 999px;
-        transition: background 0.2s ease, color 0.2s ease;
-      }
-
-      .hs-home-nav a:hover {
-        background: var(--hs-home-sea);
-        color: #fff;
-      }
-
-      /* Huvudlayout och hero. */
-      .hs-home-main {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 64px 24px 80px;
-      }
-
-      .hs-home-hero {
-        display: grid;
-        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-        gap: 32px;
-        align-items: center;
-        margin-bottom: 60px;
-        padding: 26px;
-        border-radius: 30px;
-        background-color: #f5f2ec;
-        background-image: linear-gradient(
-            120deg,
-            rgba(245, 242, 237, 0.94),
-            rgba(245, 242, 237, 0.65)
-          ),
-          url("https://productbeem.com/images/optimized/receptionists-our-people-1200.jpg");
-        background-size: cover;
-        background-position: center;
-      }
-
-      .hs-home-hero-card {
-        background: var(--hs-home-mist);
-        padding: 38px;
-        border-radius: 28px;
-        box-shadow: var(--hs-home-shadow);
-        animation: hs-home-rise 0.8s ease forwards;
-      }
-
-      .hs-home-hero h1 {
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        font-size: clamp(2.4rem, 3.5vw, 3.4rem);
-        margin: 0 0 16px;
-      }
-
-      .hs-home-hero p {
-        font-size: 1.05rem;
-        line-height: 1.7;
-        margin: 0 0 18px;
-        color: var(--hs-home-stone);
-      }
-
-      .hs-home-hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 14px;
-      }
-
-      .hs-home-hero-actions a {
-        text-decoration: none;
-        padding: 12px 22px;
-        border-radius: 999px;
-        border: 1px solid transparent;
-        font-weight: 600;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .hs-home-hero-actions a:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 20px rgba(21, 35, 45, 0.15);
-      }
-
-      .hs-home-cta-primary {
-        background: var(--hs-home-ink);
-        color: #fff;
-      }
-
-      .hs-home-cta-secondary {
-        background: transparent;
-        border-color: var(--hs-home-ink);
-        color: var(--hs-home-ink);
-      }
-
-      .hs-home-hero-side {
-        background: linear-gradient(145deg, rgba(63, 108, 122, 0.2), rgba(157, 122, 102, 0.22));
-        border-radius: 28px;
-        padding: 28px;
-        border: 1px solid rgba(63, 108, 122, 0.25);
-        animation: hs-home-rise 0.8s ease forwards;
-        animation-delay: 0.1s;
-      }
-
-      .hs-home-highlight {
-        display: grid;
-        gap: 16px;
-      }
-
-      .hs-home-highlight span {
-        font-size: 0.85rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--hs-home-sea);
-      }
-
-      .hs-home-highlight h2 {
-        margin: 0;
-        font-size: 1.5rem;
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-      }
-
-      .hs-home-highlight p {
-        margin: 0;
-        color: var(--hs-home-stone);
-        line-height: 1.7;
-      }
-
-      /* Kort och innehållsblock. */
-      .hs-home-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 20px;
-        margin: 42px 0;
-      }
-
-      .hs-home-card {
-        background: #fff;
-        border-radius: 22px;
-        padding: 24px;
-        box-shadow: 0 12px 26px rgba(21, 35, 45, 0.1);
-        border: 1px solid rgba(21, 35, 45, 0.05);
-        animation: hs-home-fade 0.9s ease forwards;
-      }
-
-      .hs-home-card h3 {
-        margin-top: 0;
-        font-size: 1.1rem;
-      }
-
-      .hs-home-card p {
-        margin: 0;
-        color: var(--hs-home-stone);
-        line-height: 1.6;
-      }
-
-      .hs-home-split {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: 28px;
-        align-items: start;
-        margin-top: 40px;
-      }
-
-      .hs-home-note {
-        background: #fff3e6;
-        padding: 24px;
-        border-radius: 20px;
-        border-left: 4px solid var(--hs-home-sun);
-        line-height: 1.7;
-      }
-
-      .hs-home-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        gap: 12px;
-      }
-
-      .hs-home-list li {
-        padding: 14px 16px;
-        background: rgba(63, 108, 122, 0.1);
-        border-radius: 16px;
-      }
-
-      /* Bildgallerier. */
-      .hs-home-gallery {
-        margin: 36px 0 10px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 20px;
-      }
-
-      .hs-home-photo {
-        background: #fff;
-        border-radius: 22px;
-        overflow: hidden;
-        border: 1px solid rgba(21, 35, 45, 0.08);
-        box-shadow: 0 12px 26px rgba(21, 35, 45, 0.12);
-      }
-
-      .hs-home-photo img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        display: block;
-      }
-
-      .hs-home-photo figcaption {
-        padding: 14px 16px 16px;
-        color: var(--hs-home-stone);
-        font-size: 0.9rem;
-      }
-
-      /* Sidfot. */
-      .hs-home-footer {
-        background: #18242b;
-        color: #f2efe8;
-        padding: 36px 24px;
-      }
-
-      .hs-home-footer-inner {
-        max-width: 1100px;
-        margin: 0 auto;
-        display: grid;
-        gap: 12px;
-        font-size: 0.95rem;
-      }
-
-      .hs-home-footer a {
-        color: #f2efe8;
-        text-decoration: none;
-      }
-
-      /* Animationer. */
-      @keyframes hs-home-rise {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes hs-home-fade {
-        from {
-          opacity: 0;
-          transform: translateY(16px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Responsivt. */
-      @media (max-width: 900px) {
-        .hs-home-hero {
-          grid-template-columns: 1fr;
-          background-image: linear-gradient(
-              120deg,
-              rgba(245, 242, 237, 0.94),
-              rgba(245, 242, 237, 0.65)
-            ),
-            url("https://productbeem.com/images/optimized/receptionists-our-people-800.jpg");
-        }
-
-        .hs-home-split {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .hs-home-hero {
-          background-image: linear-gradient(
-              120deg,
-              rgba(245, 242, 237, 0.94),
-              rgba(245, 242, 237, 0.65)
-            ),
-            url("https://productbeem.com/images/optimized/receptionists-our-people-480.jpg");
-        }
-      }
-    </style>
+      content="ProductBeem turns a single iOS photo into a studio-grade product image that matches your brand tone and target demographic."
+    />
+    <meta name="theme-color" content="#0b0f14" />
   </head>
-  <body class="hs-home-body">
-    <div class="hs-home-wrap">
-      <!-- Toppnavigering och kontakt. -->
-      <header class="hs-home-header">
-        <div class="hs-home-top">
-          <div class="hs-home-logo">Helsinki Sum Hotel</div>
-          <div class="hs-home-contact">
-            <span>Telefon: <a href="tel:+358300870680">+358 300 870680</a></span>
-            <nav class="hs-home-nav">
-              <a href="https://productbeem.com/">Hem</a>
-              <a href="https://productbeem.com/rooms.html">Rumstyper</a>
-              <a href="https://productbeem.com/restaurant.html">Restaurang</a>
-              <a href="https://productbeem.com/terms.html">Villkor</a>
-              <a href="https://productbeem.com/privacy.html">Integritet</a>
-              <a href="https://productbeem.com/disclaimer.html">Ansvar</a>
-            </nav>
-          </div>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="logo" href="#top" data-scroll>
+            <span class="logo-mark"></span>
+            <span class="logo-text">ProductBeem</span>
+          </a>
+          <nav class="nav" aria-label="Primary">
+            <a href="#features" data-scroll>Features</a>
+            <a href="#workflow" data-scroll>Workflow</a>
+            <a href="#showcase" data-scroll>Showcase</a>
+            <a href="#download" data-scroll>Download</a>
+          </nav>
+          <a class="cta small" href="#download" data-scroll>Get the app</a>
         </div>
       </header>
 
-      <main class="hs-home-main">
-        <!-- Hero med introduktion och signatur. -->
-        <section class="hs-home-hero">
-          <div class="hs-home-hero-card">
-            <h1>Lugnt nära vattnet, med korta avstånd.</h1>
-            <p>
-              Helsinki Sum Hotel är ett litet boutiquehotell nära vattnet. Vi gillar mjukt ljus,
-              trä och textilier, och är noga med detaljerna utan att störa din rytm.
-            </p>
-            <p>
-              Välj gärna utsikt mot vattnet eller en tyst innergård. Bastun är normalt öppen för
-              gäster, och i restaurangen lagar vi mat efter säsong med något nybakat på sidan.
-            </p>
-            <div class="hs-home-hero-actions">
-              <a class="hs-home-cta-primary" href="https://productbeem.com/rooms.html">Se rum &amp; sviter</a>
-              <a class="hs-home-cta-secondary" href="https://productbeem.com/restaurant.html">Upptäck restaurangen</a>
+      <main>
+        <section class="hero" id="top">
+          <div class="hero-bg" data-parallax="0.35" aria-hidden="true"></div>
+          <div class="container hero-grid">
+            <div class="hero-copy" data-reveal>
+              <div class="eyebrow">iOS product photo studio</div>
+              <h1>Turn a single snapshot into a brand-perfect product image.</h1>
+              <p>
+                ProductBeem captures any object and renders a professional studio shot in your brand image and demographic target. Upload once,
+                then export every format your store needs.
+              </p>
+              <div class="hero-actions">
+                <a class="cta primary" href="#download" data-scroll>Download for iOS</a>
+                <a class="cta ghost" href="#showcase" data-scroll>See the transformation</a>
+              </div>
+              <div class="hero-meta">
+                <div class="meta-item">
+                  <span class="meta-label">Style presets</span>
+                  <span class="meta-value">30+</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Render time</span>
+                  <span class="meta-value">Under 12s</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Output</span>
+                  <span class="meta-value">4K ready</span>
+                </div>
+              </div>
+            </div>
+            <div class="hero-visual" data-reveal>
+              <div class="orb orb-one"></div>
+              <div class="orb orb-two"></div>
+              <div class="phone">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <div class="screen-header">
+                    <span>Scan</span>
+                    <span>Render</span>
+                    <span>Export</span>
+                  </div>
+                  <div class="scan-preview">
+                    <div class="scan-grid"></div>
+                    <div class="scan-object"></div>
+                  </div>
+                  <div class="render-card">
+                    <div class="render-tags">
+                      <span class="tag">Brand mode</span>
+                      <span class="tag">Gen Z</span>
+                      <span class="tag">Soft light</span>
+                    </div>
+                    <div class="render-image"></div>
+                    <div class="render-footer">
+                      <span>Marketplace hero</span>
+                      <span>4K</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="floating-card before">
+                <span class="label">Before</span>
+                <div class="mini-shot rough"></div>
+                <span class="note">Unlit phone shot</span>
+              </div>
+              <div class="floating-card after">
+                <span class="label">After</span>
+                <div class="mini-shot polished"></div>
+                <span class="note">Brand studio render</span>
+              </div>
             </div>
           </div>
+        </section>
 
-          <aside class="hs-home-hero-side">
-            <div class="hs-home-highlight">
-              <span>Signatur</span>
-              <h2>En liten hamn mitt i staden.</h2>
+        <section class="section trust" data-reveal>
+          <div class="container trust-inner">
+            <p>Trusted by indie shops, boutique agencies, and growing DTC teams.</p>
+            <div class="trust-grid">
+              <span>Morning Shelf</span>
+              <span>Threadline</span>
+              <span>Nomad Studio</span>
+              <span>Arc Coast</span>
+              <span>Beech Labs</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="features">
+          <div class="container">
+            <div class="section-header" data-reveal>
+              <p class="eyebrow">Why ProductBeem</p>
+              <h2>Studio results without the studio budget.</h2>
               <p>
-                Vi tar emot färre gäster med flit så vi hinner hjälpa till på riktigt. Morgonkaffe,
-                bastutid, taxi eller tips i kvarteret - vi löser det.
-              </p>
-              <p>
-                Kajen ligger nära och designkvarteren är en kort promenad bort. Vill du cykla
-                lånar vi gärna ut en.
+                Dial in your brand image, audience, and lighting once. ProductBeem keeps every product shot consistent across your catalog.
               </p>
             </div>
-          </aside>
-        </section>
-
-        <!-- Incheckning och receptionsbild. -->
-        <section>
-          <h2>Incheckning i lugn takt</h2>
-          <p>
-            Receptionen är liten och varm, och incheckningen går i lugn takt. Vi tar oss tid och
-            hjälper till med det du behöver, direkt på plats.
-          </p>
-          <div class="hs-home-gallery">
-            <figure class="hs-home-photo">
-              <img
-                src="https://productbeem.com/images/optimized/receptionist-800.jpg"
-                alt="Vänligt receptionsteam som välkomnar gäster."
-                loading="lazy"
-                width="1200"
-                height="800"
-              >
-              <figcaption>Du möts av ett team som har tid för din ankomst.</figcaption>
-            </figure>
+            <div class="feature-grid">
+              <div class="feature-card" data-reveal>
+                <div class="icon-ring">01</div>
+                <h3>Brand intelligence</h3>
+                <p>Capture your palette, tone, and styling so every shot feels like it came from the same campaign.</p>
+              </div>
+              <div class="feature-card" data-reveal>
+                <div class="icon-ring">02</div>
+                <h3>Demographic targeting</h3>
+                <p>Render variations that speak to your buyer, from minimal luxe to playful pop and seasonal drops.</p>
+              </div>
+              <div class="feature-card" data-reveal>
+                <div class="icon-ring">03</div>
+                <h3>Instant exports</h3>
+                <p>One tap delivers listings, social crops, and lifestyle banners in the sizes your channels need.</p>
+              </div>
+            </div>
           </div>
         </section>
 
-        <!-- Snabbt om hotellet (features). -->
-        <div class="hs-home-grid">
-          <article class="hs-home-card">
-            <h3>Lugna morgnar</h3>
-            <p>
-              Frukosten är lugn utan bufféstök: lokala ostar, nygräddat bröd och
-              havtornsmarmelad.
-            </p>
-          </article>
-          <article class="hs-home-card">
-            <h3>Design med hjärta</h3>
-            <p>
-              Lokalt hantverk, mjuka textilier och möbler som är byggda för att hålla.
-            </p>
-          </article>
-          <article class="hs-home-card">
-            <h3>Värme och vatten</h3>
-            <p>
-              Bastun är för våra gäster. Vissa kvällar öppnar vi gården för ett snabbt dopp.
-            </p>
-          </article>
-          <article class="hs-home-card">
-            <h3>Små möten</h3>
-            <p>
-              Ett studio-rum för workshops, strategisamtal och små middagar.
-            </p>
-          </article>
-        </div>
-
-        <!-- Konferensrum och bilder. -->
-        <section>
-          <h2>Konferensrum med fokus</h2>
-          <p>
-            När du behöver samla teamet kan vi ordna ljusa rum med flexibel möblering, bra akustik
-            och det du behöver för att presentera.
-          </p>
-          <div class="hs-home-gallery">
-            <figure class="hs-home-photo">
-              <img
-                src="https://productbeem.com/images/optimized/conference-room-deluxe-800.jpg"
-                alt="Ljust konferensrum med stort bord och dagsljus."
-                loading="lazy"
-                width="1200"
-                height="800"
-              >
-              <figcaption>Generöst ljus och plats för arbete runt bordet.</figcaption>
-            </figure>
-            <figure class="hs-home-photo">
-              <img
-                src="https://productbeem.com/images/optimized/conference-room-setup-800.jpg"
-                alt="Mötesrum med presentationstavla och mjuka stolar."
-                loading="lazy"
-                width="1200"
-                height="800"
-              >
-              <figcaption>Redo för presentationer och lugna samtal.</figcaption>
-            </figure>
-            <figure class="hs-home-photo">
-              <img
-                src="https://productbeem.com/images/optimized/room-3-july-2024-rows-seats-800.jpg"
-                alt="Konferensrum med rader av stolar för föredrag."
-                loading="lazy"
-                width="1200"
-                height="800"
-              >
-              <figcaption>Raduppställning för föredrag, utbildning och kickoff.</figcaption>
-            </figure>
+        <section class="section workflow" id="workflow">
+          <div class="container workflow-grid">
+            <div class="workflow-copy" data-reveal>
+              <p class="eyebrow">Workflow</p>
+              <h2>Shoot once. Launch everywhere.</h2>
+              <p>
+                ProductBeem uses your iPhone camera to scan the object, then builds a styled set in seconds. You control the brand tone, audience,
+                and the hero shot you want.
+              </p>
+              <div class="pill-row">
+                <span class="pill">iOS 17+</span>
+                <span class="pill">Studio lighting</span>
+                <span class="pill">No setup gear</span>
+              </div>
+            </div>
+            <div class="workflow-steps">
+              <div class="step-card" data-reveal>
+                <span class="step-number">1</span>
+                <div>
+                  <h3>Scan the product</h3>
+                  <p>Move around your item once and lock in the raw detail with guided capture.</p>
+                </div>
+              </div>
+              <div class="step-card" data-reveal>
+                <span class="step-number">2</span>
+                <div>
+                  <h3>Choose the audience</h3>
+                  <p>Pick a demographic target and brand kit. ProductBeem builds the ideal set and lighting.</p>
+                </div>
+              </div>
+              <div class="step-card" data-reveal>
+                <span class="step-number">3</span>
+                <div>
+                  <h3>Export the campaign</h3>
+                  <p>Download a full shot pack ready for web, socials, and ads in minutes.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        <!-- Hållbarhet och snabbfakta. -->
-        <section class="hs-home-split">
-          <div class="hs-home-note">
-            <h2>Hållbarhet som känns i vardagen</h2>
-            <p>
-              Vi försöker handla nära: råvaror från kusten, små leverantörer och textilier som
-              håller länge. Vi drar ner på engångsartiklar och använder energisnåla lösningar.
-            </p>
-            <p>
-              Som gäst kan du välja glesare städning, fylla på vatten i lobbyn och få promenadtips
-              för att upptäcka staden i lugn takt.
-            </p>
+        <section class="section showcase" id="showcase">
+          <div class="container">
+            <div class="section-header" data-reveal>
+              <p class="eyebrow">Showcase</p>
+              <h2>Before and after that feels like a new studio.</h2>
+              <p>Transform a casual capture into a premium catalog moment with carefully tuned styling.</p>
+            </div>
+            <div class="compare-grid">
+              <div class="compare-card raw" data-reveal>
+                <span class="compare-label">Raw snapshot</span>
+                <div class="compare-image"></div>
+                <div class="compare-footer">
+                  <span>Kitchen lighting</span>
+                  <span>Phone capture</span>
+                </div>
+              </div>
+              <div class="compare-card rendered" data-reveal>
+                <span class="compare-label">ProductBeem render</span>
+                <div class="compare-image"></div>
+                <div class="compare-footer">
+                  <span>Brand set</span>
+                  <span>Launch ready</span>
+                </div>
+              </div>
+            </div>
+            <div class="tone-strip" data-reveal>
+              <span>Neutral minimal</span>
+              <span>Warm artisan</span>
+              <span>Modern tech</span>
+              <span>Playful pop</span>
+              <span>Premium luxe</span>
+            </div>
           </div>
-          <div>
-            <h2>Snabbfakta</h2>
-            <ul class="hs-home-list">
-              <li>Cirka 48 rum och sviter, utformade för tystnad.</li>
-              <li>Bastu, lugn lounge och ett litet bibliotek med lokal design.</li>
-              <li>Restaurang med säsongens meny och kvällsservering.</li>
-              <li>Två mötesrum för upp till 18 personer.</li>
-              <li>Låncyklar och kartor för stadsturer.</li>
-            </ul>
-            <p>
-              <strong>Adress:</strong> Annankatu 22, 00120 Helsinki, Finland<br >
-              <strong>Telefon:</strong>
-              <a class="hs-home-inline-link" href="tel:+358300870680">+358 300 870680</a><br >
-              <strong>E-post:</strong>
-              <a class="hs-home-inline-link" href="mailto:hej@productbeem.com"
-                >hej@productbeem.com</a
-              >
-            </p>
-            <p>
-              Betalning sker på plats efter utcheckning. Vi tar inte emot betalning via
-              webbplatsen eller telefon.
-            </p>
+        </section>
+
+        <section class="section download" id="download">
+          <div class="container download-inner" data-reveal>
+            <div>
+              <p class="eyebrow">Download</p>
+              <h2>Bring ProductBeem to your iPhone.</h2>
+              <p>We are polishing the App Store listing. Join the launch list and be first to install.</p>
+            </div>
+            <div class="download-actions">
+              <a class="app-store" href="#" aria-label="App Store link coming soon" data-mock>
+                <div class="app-store-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M15.8 3.1c-.7.8-1.2 1.8-1.1 2.8 1 .1 2.1-.5 2.8-1.3.7-.8 1.2-1.8 1.1-2.8-.9 0-2 .6-2.8 1.3Zm4.2 14.5c-.5 1.1-.7 1.5-1.4 2.5-.9 1.2-2.1 2.7-3.7 2.7-1.4 0-1.8-.9-3.6-.9-1.8 0-2.3.9-3.6.9-1.6 0-2.9-1.4-3.8-2.6-2.1-2.9-2.3-6.3-1-8.4.9-1.5 2.4-2.4 3.9-2.4 1.4 0 2.3.9 3.5.9 1.2 0 1.9-.9 3.5-.9 1.3 0 2.7.7 3.6 2-3.2 1.7-2.7 6.5 1.6 7.3Z"
+                    />
+                  </svg>
+                </div>
+                <div class="app-store-text">
+                  <span>Download on the</span>
+                  <strong>App Store</strong>
+                </div>
+              </a>
+              <span class="micro">App Store link coming soon.</span>
+            </div>
           </div>
         </section>
       </main>
 
-      <!-- Sidfot. -->
-      <footer class="hs-home-footer">
-        <div class="hs-home-footer-inner">
-          <div>Helsinki Sum Hotel - litet, lugnt och personligt.</div>
-          <div>
-            <a href="https://productbeem.com/terms.html">Allmänna villkor</a> |
-            <a href="https://productbeem.com/privacy.html">Integritetspolicy</a> |
-            <a href="https://productbeem.com/disclaimer.html">Ansvarsfriskrivning</a>
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="footer-brand">
+            <span class="logo-mark small"></span>
+            <span>ProductBeem</span>
+          </div>
+          <div class="footer-meta">
+            <span>Crafted for modern product teams.</span>
+            <span>Copyright <span data-year></span> ProductBeem</span>
           </div>
         </div>
       </footer>
     </div>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
-
-
-
-
-
