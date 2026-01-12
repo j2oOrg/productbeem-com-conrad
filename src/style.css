@@ -117,18 +117,21 @@ img {
 }
 
 .logo-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 12px;
-  background: conic-gradient(from 180deg, #22d3c5, #5ad1ff, #f5c06c, #22d3c5);
-  box-shadow: 0 8px 20px rgba(34, 211, 197, 0.3);
-  display: inline-block;
+  height: 66px;
+  width: auto;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+  flex-shrink: 0;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
 }
 
 .logo-mark.small {
-  width: 24px;
-  height: 24px;
-  border-radius: 9px;
+  height: 48px;
 }
 
 .nav {
