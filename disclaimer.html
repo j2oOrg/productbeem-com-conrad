@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <title>Ansvarsfriskrivning - Helsinki Sum Hotel</title>
+    <meta
+      name="description"
+      content="Kort ansvarsfriskrivning om information på webbplatsen, externa länkar och ändringar."
+    >
+    <style>
+      /* Grund, typografi och färger. */
+      :root {
+        --hs-disc-ink: #181f24;
+        --hs-disc-cream: #f3ede6;
+        --hs-disc-ember: #b07a45;
+        --hs-disc-slate: #4b5a64;
+        --hs-disc-olive: #7b8a7a;
+        --hs-disc-shadow: 0 16px 30px rgba(24, 31, 36, 0.15);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Baskerville", "Garamond", "Georgia", serif;
+        color: var(--hs-disc-ink);
+        background: linear-gradient(165deg, #f6f1eb 0%, #ece6de 50%, #d9dcd8 100%);
+      }
+
+      .hs-disc-shell {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hs-disc-shell::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle at 10% 15%, rgba(176, 122, 69, 0.18), transparent 45%),
+          radial-gradient(circle at 85% 10%, rgba(123, 138, 122, 0.15), transparent 55%);
+        pointer-events: none;
+      }
+
+      /* Header och navigation. */
+      .hs-disc-header {
+        background: rgba(243, 237, 230, 0.9);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(24, 31, 36, 0.1);
+      }
+
+      .hs-disc-top {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 18px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .hs-disc-logo {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 1.05rem;
+      }
+
+      .hs-disc-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 0.95rem;
+      }
+
+      .hs-disc-nav a {
+        text-decoration: none;
+        color: var(--hs-disc-ink);
+        padding: 6px 10px;
+        border-radius: 999px;
+      }
+
+      .hs-disc-nav a:hover {
+        background: var(--hs-disc-olive);
+        color: #fff;
+      }
+
+      /* Huvudkort för ansvarsfriskrivning. */
+      .hs-disc-main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 64px 24px 80px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hs-disc-card {
+        background: var(--hs-disc-cream);
+        padding: 34px;
+        border-radius: 24px;
+        box-shadow: var(--hs-disc-shadow);
+        animation: hs-disc-slide 0.8s ease forwards;
+      }
+
+      .hs-disc-card h1 {
+        margin-top: 0;
+        font-size: 2rem;
+      }
+
+      .hs-disc-card h2 {
+        margin-top: 28px;
+        font-size: 1.2rem;
+      }
+
+      .hs-disc-card p {
+        line-height: 1.7;
+        color: var(--hs-disc-slate);
+      }
+
+      .hs-disc-inline-link {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-color: rgba(24, 31, 36, 0.35);
+      }
+
+      .hs-disc-inline-link:hover {
+        color: var(--hs-disc-ember);
+      }
+
+      /* Listor och infobox. */
+      .hs-disc-list {
+        padding-left: 18px;
+        color: var(--hs-disc-slate);
+        line-height: 1.6;
+      }
+
+      .hs-disc-panel {
+        background: rgba(176, 122, 69, 0.16);
+        padding: 16px 18px;
+        border-radius: 18px;
+        margin-top: 20px;
+      }
+
+      /* Sidfot. */
+      .hs-disc-footer {
+        background: #181f24;
+        color: #f3ede6;
+        padding: 32px 24px;
+      }
+
+      .hs-disc-footer-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        gap: 12px;
+        font-size: 0.95rem;
+      }
+
+      .hs-disc-footer a {
+        color: #f3ede6;
+        text-decoration: none;
+      }
+
+      /* Animationer. */
+      @keyframes hs-disc-slide {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hs-disc-shell">
+      <!-- Toppnavigering. -->
+      <header class="hs-disc-header">
+        <div class="hs-disc-top">
+          <div class="hs-disc-logo">Helsinki Sum Hotel</div>
+          <nav class="hs-disc-nav">
+            <a href="https://productbeem.com/">Hem</a>
+            <a href="https://productbeem.com/rooms.html">Rumstyper</a>
+            <a href="https://productbeem.com/restaurant.html">Restaurang</a>
+            <a href="https://productbeem.com/terms.html">Villkor</a>
+            <a href="https://productbeem.com/privacy.html">Integritet</a>
+            <a href="https://productbeem.com/disclaimer.html">Ansvar</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Ansvarsfriskrivning. -->
+      <main class="hs-disc-main">
+        <article class="hs-disc-card">
+          <h1>Ansvarsfriskrivning</h1>
+          <p>
+            Informationen på webbplatsen är till för att ge en bild av Helsinki Sum Hotel. Vi
+            håller den uppdaterad så gott vi kan, men kan inte lova att allt alltid är helt korrekt
+            eller fullständigt.
+          </p>
+          <p><strong>Senast uppdaterad:</strong> 12 januari 2026</p>
+
+          <h2>Ändringar och tillgänglighet</h2>
+          <p>
+            Vi kan ändra priser, erbjudanden, öppettider och tjänster utan förvarning. Vid bokning
+            gäller alltid informationen i din bekräftelse.
+          </p>
+
+          <h2>Externa länkar</h2>
+          <p>
+            Webbplatsen kan innehålla länkar till externa aktörer, till exempel transport, museer
+            eller upplevelser. Vi ansvarar inte för innehåll, säkerhet eller policyer på deras
+            webbplatser.
+          </p>
+
+          <h2>Reseinformation</h2>
+          <p>
+            Vi delar tips om väder, transport och lokala aktiviteter som en service, men det är
+            alltid gästens ansvar att kontrollera aktuell information och planera resan därefter.
+          </p>
+
+          <h2>Allergier och specialkost</h2>
+          <p>
+            Vi gör vårt bästa för att anpassa mat och dryck, men kan inte garantera en helt
+            allergenfri miljö. Informera oss i god tid så att vi kan hjälpa dig.
+          </p>
+
+          <h2>Oförutsedda händelser</h2>
+          <ul class="hs-disc-list">
+            <li>
+              Vi ansvarar inte för förseningar eller avbrott som orsakas av väder, myndighetsbeslut
+              eller andra faktorer utanför vår kontroll.
+            </li>
+            <li>
+              Vid störningar i vatten, el eller internet gör vi vårt bästa för att lösa problemet
+              så snabbt som möjligt.
+            </li>
+          </ul>
+
+          <div class="hs-disc-panel">
+            <p>
+              Har du frågor om innehållet? Hör av dig till
+              <a class="hs-disc-inline-link" href="mailto:hej@productbeem.com"
+                >hej@productbeem.com</a
+              >
+              eller ring <a class="hs-disc-inline-link" href="tel:+358300870680">+358 300 870680</a>.
+            </p>
+          </div>
+        </article>
+      </main>
+
+      <!-- Sidfot. -->
+      <footer class="hs-disc-footer">
+        <div class="hs-disc-footer-inner">
+          <div>Ansvarsfriskrivning för Helsinki Sum Hotel.</div>
+          <div>
+            <a href="https://productbeem.com/terms.html">Allmänna villkor</a> |
+            <a href="https://productbeem.com/privacy.html">Integritetspolicy</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+
+
+
+

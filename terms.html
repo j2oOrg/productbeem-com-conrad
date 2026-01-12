@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <title>Allmänna villkor - Helsinki Sum Hotel</title>
+    <meta
+      name="description"
+      content="Villkor för bokning och vistelse, inklusive betalning efter utcheckning, avbokning och ansvar."
+    >
+    <style>
+      /* Grund, typografi och färger. */
+      :root {
+        --hs-terms-ink: #18222b;
+        --hs-terms-paper: #f4f1ea;
+        --hs-terms-mocha: #4f5a63;
+        --hs-terms-copper: #c48b3a;
+        --hs-terms-olive: #6b7b6a;
+        --hs-terms-shadow: 0 16px 30px rgba(24, 34, 43, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Georgia", "Times New Roman", serif;
+        color: var(--hs-terms-ink);
+        background: linear-gradient(170deg, #f6f2eb 0%, #eef2ed 50%, #d8ddd9 100%);
+      }
+
+      .hs-terms-frame {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hs-terms-frame::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle at 10% 15%, rgba(196, 139, 58, 0.2), transparent 40%),
+          radial-gradient(circle at 90% 10%, rgba(107, 123, 106, 0.14), transparent 45%);
+        pointer-events: none;
+      }
+
+      /* Header och navigation. */
+      .hs-terms-header {
+        background: rgba(244, 241, 234, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(24, 34, 43, 0.1);
+      }
+
+      .hs-terms-topline {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 18px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .hs-terms-name {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 1.05rem;
+      }
+
+      .hs-terms-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 0.95rem;
+      }
+
+      .hs-terms-nav a {
+        text-decoration: none;
+        color: var(--hs-terms-ink);
+        padding: 6px 10px;
+        border-radius: 999px;
+      }
+
+      .hs-terms-nav a:hover {
+        background: var(--hs-terms-olive);
+        color: #fff;
+      }
+
+      /* Huvudkort för villkorstext. */
+      .hs-terms-main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 64px 24px 80px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hs-terms-card {
+        background: var(--hs-terms-paper);
+        padding: 34px;
+        border-radius: 24px;
+        box-shadow: var(--hs-terms-shadow);
+        animation: hs-terms-fade 0.8s ease forwards;
+      }
+
+      .hs-terms-card h1 {
+        margin-top: 0;
+        font-size: 2rem;
+      }
+
+      .hs-terms-card h2 {
+        margin-top: 28px;
+        font-size: 1.2rem;
+      }
+
+      .hs-terms-card p {
+        line-height: 1.7;
+        color: var(--hs-terms-mocha);
+      }
+
+      .hs-terms-inline-link {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-color: rgba(24, 34, 43, 0.35);
+      }
+
+      .hs-terms-inline-link:hover {
+        color: var(--hs-terms-olive);
+      }
+
+      /* Markerad informationsruta. */
+      .hs-terms-list {
+        padding-left: 18px;
+        color: var(--hs-terms-mocha);
+        line-height: 1.6;
+      }
+
+      .hs-terms-highlight {
+        background: rgba(196, 139, 58, 0.2);
+        padding: 16px 18px;
+        border-radius: 18px;
+        margin-top: 20px;
+      }
+
+      /* Sidfot. */
+      .hs-terms-footer {
+        background: #18222b;
+        color: #f4f1ea;
+        padding: 32px 24px;
+      }
+
+      .hs-terms-footer-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        gap: 12px;
+        font-size: 0.95rem;
+      }
+
+      .hs-terms-footer a {
+        color: #f4f1ea;
+        text-decoration: none;
+      }
+
+      /* Animationer. */
+      @keyframes hs-terms-fade {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hs-terms-frame">
+      <!-- Toppnavigering. -->
+      <header class="hs-terms-header">
+        <div class="hs-terms-topline">
+          <div class="hs-terms-name">Helsinki Sum Hotel</div>
+          <nav class="hs-terms-nav">
+            <a href="https://productbeem.com/">Hem</a>
+            <a href="https://productbeem.com/rooms.html">Rumstyper</a>
+            <a href="https://productbeem.com/restaurant.html">Restaurang</a>
+            <a href="https://productbeem.com/terms.html">Villkor</a>
+            <a href="https://productbeem.com/privacy.html">Integritet</a>
+            <a href="https://productbeem.com/disclaimer.html">Ansvar</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Villkorstext. -->
+      <main class="hs-terms-main">
+        <article class="hs-terms-card">
+          <h1>Allmänna villkor</h1>
+          <p>
+            Det här är våra villkor för bokning och vistelse på Helsinki Sum Hotel. När du bokar
+            bekräftar du att du har läst dem. Undrar du något är du alltid välkommen att höra av
+            dig.
+          </p>
+          <p><strong>Senast uppdaterad:</strong> 12 januari 2026</p>
+
+          <h2>Bokning och bekräftelse</h2>
+          <p>
+            En bokning gäller när du får en skriftlig bekräftelse från oss. Vi kan hålla ett rum
+            utan garanti i upp till 24 timmar, därefter släpps det om vi inte fått bekräftelse.
+          </p>
+
+          <h2>Betalning</h2>
+          <p>
+            Vi tar betalt efter att du har checkat ut. Vi tar inte emot några betalningar på
+            webbplatsen eller över telefon för din vistelse, och vi begär aldrig förskott. Vi
+            accepterar de vanligaste betalkorten.
+          </p>
+          <p>
+            Vi går igenom betalningen i samband med utcheckning så att det är tydligt vad som
+            ingår.
+          </p>
+
+          <h2>Avbokning och ändring</h2>
+          <ul class="hs-terms-list">
+            <li>
+              Avbokning senast 18.00 dagen före ankomst är kostnadsfri för flexibla bokningar.
+            </li>
+            <li>
+              Senare avbokning eller utebliven ankomst debiteras första natten.
+            </li>
+            <li>
+              För erbjudanden som inte är återbetalningsbara görs ingen återbetalning.
+            </li>
+          </ul>
+
+          <h2>In- och utcheckning</h2>
+          <p>
+            Incheckning sker från 15.00 och utcheckning senast 11.00. Sen utcheckning kan ordnas i
+            mån av plats och mot avgift. Vid tidig ankomst hjälper vi gärna till att förvara
+            bagage.
+          </p>
+
+          <h2>Ordning, ansvar och skador</h2>
+          <p>
+            Du ansvarar för eventuella skador som uppstår under vistelsen. Rökning inomhus är inte
+            tillåten och medför saneringsavgift. Om ordningsstörning uppstår kan vi avbryta
+            vistelsen utan återbetalning.
+          </p>
+
+          <h2>Husdjur</h2>
+          <p>
+            Vissa rum är husdjursvänliga. Säg till vid bokning så att vi kan tilldela rätt rum.
+            Extra städkostnad kan tillkomma.
+          </p>
+
+          <h2>Force majeure</h2>
+          <p>
+            Vid händelser utanför vår kontroll, som naturkatastrofer, myndighetsbeslut eller
+            strejk, kan vi behöva justera eller avboka bokningar. Vi gör då vårt bästa för att
+            hitta en lösning.
+          </p>
+
+          <div class="hs-terms-highlight">
+            <p>
+              Har du frågor om villkoren? Hör av dig till
+              <a class="hs-terms-inline-link" href="mailto:hej@productbeem.com"
+                >hej@productbeem.com</a
+              >
+              eller ring
+              <a class="hs-terms-inline-link" href="tel:+358300870680">+358 300 870680</a>.
+            </p>
+          </div>
+        </article>
+      </main>
+
+      <!-- Sidfot. -->
+      <footer class="hs-terms-footer">
+        <div class="hs-terms-footer-inner">
+          <div>Villkor för vistelse på Helsinki Sum Hotel.</div>
+          <div>
+            <a href="https://productbeem.com/privacy.html">Integritetspolicy</a> |
+            <a href="https://productbeem.com/disclaimer.html">Ansvarsfriskrivning</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+
+
+
+

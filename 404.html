@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <title>404 - Sidan finns inte</title>
+    <meta
+      name="description"
+      content="Sidan finns inte. Du kan testa igen eller kontakta oss vid behov."
+    >
+    <style>
+      /* Grund, typografi och färger. */
+      :root {
+        --hs-404c-ink: #18222b;
+        --hs-404c-cloud: #eef2f1;
+        --hs-404c-line: rgba(24, 34, 43, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        background: var(--hs-404c-cloud);
+        color: var(--hs-404c-ink);
+        font-family: "Optima", "Candara", "Trebuchet MS", sans-serif;
+      }
+
+      /* Själva felrutan. */
+      .hs-404c-panel {
+        max-width: 520px;
+        width: 100%;
+        padding: 26px 30px;
+        border-radius: 18px;
+        border: 1px solid var(--hs-404c-line);
+        background: #fff;
+      }
+
+      .hs-404c-title {
+        margin: 0 0 10px;
+        font-size: 1.8rem;
+      }
+
+      .hs-404c-text {
+        margin: 0 0 12px;
+        line-height: 1.6;
+      }
+
+      .hs-404c-meta {
+        font-size: 0.95rem;
+        color: #4c5a64;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Enkelt 404-meddelande utan länkar eller navigation. -->
+    <main class="hs-404c-panel">
+      <h1 class="hs-404c-title">Sidan finns inte</h1>
+      <p class="hs-404c-text">
+        Du hamnade på en sida som inte längre finns här. Det kan vara en gammal länk eller en
+        felskriven adress.
+      </p>
+      <p class="hs-404c-text">
+        Om du behöver hjälp, ring oss eller mejla så hjälper vi gärna.
+      </p>
+      <div class="hs-404c-meta">Felkod 404</div>
+    </main>
+  </body>
+</html>
+
+
